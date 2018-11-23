@@ -7,7 +7,7 @@ fs.readFile('./assets/flowers.txt', (err, data)=>{
     
     let flowers = data.toString().split("\n");
 
-    let resuilts = {
+    let results = {
         //number of rows 
         rows: flowers.length,
         //number of flowers that's not starts with S gonna call it Number of flowers not with S = nofws
@@ -24,24 +24,24 @@ fs.readFile('./assets/flowers.txt', (err, data)=>{
 
     _.filter(flowers, (name) => {
 		if(_.contains(name[0], 'S')) {
-			resuilts.FlowersWithS.push(name)
+			results.FlowersWithS.push(name)
 		} else {
-			resuilts.nofws += 1;
+			results.nofws += 1;
 
 
 
 			if (_.contains(name[0], 'K')) {
-				resuilts.FlowersWithK.push(name)
+				results.FlowersWithK.push(name)
 			}
 		}
 
 
                 if (name.length === 5) {
-                    resuilts.flowersLengthFive.push(name)
+                    results.flowersLengthFive.push(name)
                 }
 	})
 
     //the results are goinig to be showen in the console
-    console.log(resuilts);
+    console.log(results);
 
 })
