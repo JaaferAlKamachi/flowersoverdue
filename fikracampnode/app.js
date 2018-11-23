@@ -14,8 +14,8 @@ fs.readFile('./assets/flowers.txt', (err, data)=>{
         nofws: 0,
         //flowers that's starts with S and it's gonna be an array 
         FlowersWithS: [],
-        //flowers starts with my letter K 
-        FlowersWithK: [],
+        //flowers starts with my letter J (my name is combined mohamed jaafer and people call me jaafer)
+        FlowersWithJ: [],
         //flowers with length of five 
         flowersLengthFive: []
     }
@@ -30,7 +30,7 @@ fs.readFile('./assets/flowers.txt', (err, data)=>{
 
 
 
-			if (_.contains(name[0], 'K')) {
+			if (_.contains(name[0], 'J')) {
 				results.FlowersWithK.push(name)
 			}
 		}
